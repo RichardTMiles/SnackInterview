@@ -48,7 +48,7 @@ The following php command can be used to count the number of lines in a file (RE
 Cat will print a full file to stdout which is then piped to wc -l. 
 This ensures wc will not print the filename in the corresponding output. 
 This is just php running a [shell_exec](https://www.php.net/manual/en/function.shell-exec.php) using the [Execution Operator](https://www.php.net/manual/en/language.operators.execution.php).
-PHP is not the best language for this task which is the shell `wc` is used, but a pure PHP example can be done.
+PHP is not the best language for this task which is why the shell `wc` is used, but a pure PHP example can be done.
 For sufficiently large files, php can not load the full file into memory.
 This only leaves us with the option of reading the file line by line using a file pointer.
 ```PHP
