@@ -1,0 +1,35 @@
+{
+    "name": "richardtmiles/snack-interview",
+    "description": "Do what it takes",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "SnackInterview\\": "snackinterview/",
+            "SnackInterview\\Tables\\": "snackinterview/tables/"
+        }
+    },
+    "scripts": {
+        "db": [
+            "php index.php cnf",
+            "php index.php buildDatabase -r"
+        ],
+        "rest": [
+            "php index.php restbuilder -prefix carbon_ -dontQueryWithDatabaseName -excludeTablesRegex '#_mig_.*#' -react src/api/rest/ -json -namespace 'SnackInterview\\Tables' -target snackinterview/tables/"
+        ],
+        "post-install-cmd": [
+            "@db",
+            "@rest"
+        ]
+    },
+    "authors": [
+        {
+            "name": "richardtmiles",
+            "email": "richard@miles.systems"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "carbonorm/carbonphp": "^17.1"
+    }
+}

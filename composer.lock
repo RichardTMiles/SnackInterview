@@ -1,0 +1,203 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "9cfad600d4ae5a352a0b69db8949e8e7",
+    "packages": [
+        {
+            "name": "carbonorm/carbonphp",
+            "version": "17.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CarbonORM/CarbonPHP.git",
+                "reference": "088d5ceaa5fc0345c49af592580936e708493e5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CarbonORM/CarbonPHP/zipball/088d5ceaa5fc0345c49af592580936e708493e5a",
+                "reference": "088d5ceaa5fc0345c49af592580936e708493e5a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-fileinfo": "*",
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "ext-pcntl": "*",
+                "ext-pdo": "*",
+                "ext-posix": "*",
+                "ext-readline": "*",
+                "ext-sockets": "*",
+                "ext-zip": "*",
+                "mustache/mustache": "^2.13.0",
+                "php": ">=8.1",
+                "psr/log": "1.1.4"
+            },
+            "require-dev": {
+                "phpmetrics/phpmetrics": ">=2.7",
+                "phpunit/phpunit": ">=9.5",
+                "phpunit/phpunit-selenium": ">=9.0.1",
+                "se/selenium-server-standalone": ">=3.141.59",
+                "wp-cli/wp-cli-bundle": ">=2.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tests\\": "tests/",
+                    "Config\\": "config/",
+                    "CarbonPHP\\": "carbonphp/",
+                    "Tests\\Browser\\": "tests/browser/",
+                    "Tests\\Feature\\": "tests/feature/",
+                    "CarbonPHP\\Enums\\": "carbonphp/enums/",
+                    "CarbonPHP\\Error\\": "carbonphp/error/",
+                    "CarbonPHP\\Tables\\": "carbonphp/tables/",
+                    "CarbonPHP\\Helpers\\": "carbonphp/helpers/",
+                    "CarbonPHP\\Restful\\": "carbonphp/restful/",
+                    "CarbonPHP\\Programs\\": "carbonphp/programs/",
+                    "CarbonPHP\\Abstracts\\": "carbonphp/abstracts/",
+                    "CarbonPHP\\WebSocket\\": "carbonphp/websocket/",
+                    "CarbonPHP\\Interfaces\\": "carbonphp/interfaces/",
+                    "CarbonPHP\\Tables\\Traits\\": "carbonphp/tables/traits/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Richard Miles",
+                    "email": "Richard@Miles.systems",
+                    "homepage": "https://www.carbonPHP.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP 8.1+ tool kit featuring RESTFUL ORM, sockets, session management, and routing.",
+            "homepage": "https://github.com/richardtmiles/carbonphp",
+            "keywords": [
+                "carbon",
+                "io",
+                "pipes",
+                "routing",
+                "session",
+                "sockets"
+            ],
+            "support": {
+                "issues": "https://github.com/CarbonORM/CarbonPHP/issues",
+                "source": "https://github.com/CarbonORM/CarbonPHP/tree/17.1.2"
+            },
+            "time": "2023-09-08T05:04:33+00:00"
+        },
+        {
+            "name": "mustache/mustache",
+            "version": "v2.14.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/mustache.php.git",
+                "reference": "e62b7c3849d22ec55f3ec425507bf7968193a6cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/e62b7c3849d22ec55f3ec425507bf7968193a6cb",
+                "reference": "e62b7c3849d22ec55f3ec425507bf7968193a6cb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~1.11",
+                "phpunit/phpunit": "~3.7|~4.0|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mustache": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Hileman",
+                    "email": "justin@justinhileman.info",
+                    "homepage": "http://justinhileman.com"
+                }
+            ],
+            "description": "A Mustache implementation in PHP.",
+            "homepage": "https://github.com/bobthecow/mustache.php",
+            "keywords": [
+                "mustache",
+                "templating"
+            ],
+            "support": {
+                "issues": "https://github.com/bobthecow/mustache.php/issues",
+                "source": "https://github.com/bobthecow/mustache.php/tree/v2.14.2"
+            },
+            "time": "2022-08-23T13:07:01+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
