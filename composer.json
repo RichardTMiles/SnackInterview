@@ -30,6 +30,7 @@
     ],
     "require": {
         "php": ">=8.2",
-        "carbonorm/carbonphp": "^17.1"
+        "carbonorm/carbonphp": "^17.1",
+        "ext-readline": "*"
     }
 }

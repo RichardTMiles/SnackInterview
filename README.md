@@ -137,43 +137,45 @@ My project [CarbonPHP](https://github.com/CarbonORM/CarbonPHP) uses PDO and prep
 ### 5.1. Create a Library Book Management System
 ### Instructions:
 Create a simple Library Book Management System in PHP using object-oriented programming principles. Your system should consist of a Book class and a Library class.
-Book Class:
-Create a Book class with the following attributes and methods:
-• Attributes: 
-    • Title
-    • Author
-    • ISBN (International Standard Book Number)
-    • Availability (boolean indicating whether the book is available for borrowing)
-• Methods:
-    • __construct($title, $author, $isbn): A constructor method to initialize the book's attributes. By default, a book should be marked as available.
-    • getTitle(): Returns the book's title.
-    • getAuthor(): Returns the book's author.
-    • getISBN(): Returns the book's ISBN.
-    • isAvailable(): Returns true if the book is available, false otherwise.
-    • borrowBook(): Sets the book's availability to false when it's borrowed.
-    • returnBook(): Sets the book's availability to true when it's returned.
 
-Library Class:
+##### Book Class:
+Create a Book class with the following attributes and methods:
+- Attributes: 
+    - Title
+    - Author
+    - ISBN (International Standard Book Number)
+    - Availability (boolean indicating whether the book is available for borrowing)
+- Methods:
+    - __construct($title, $author, $isbn): A constructor method to initialize the book's attributes. By default, a book should be marked as available.
+    - getTitle(): Returns the book's title.
+    - getAuthor(): Returns the book's author.
+    - getISBN(): Returns the book's ISBN.
+    - isAvailable(): Returns true if the book is available, false otherwise.
+    - borrowBook(): Sets the book's availability to false when it's borrowed.
+    - returnBook(): Sets the book's availability to true when it's returned.
+
+##### Library Class:
 Create a Library class with the following attributes and methods:
-• Attributes:
-    • Name
-    • Books (an array to store Book objects)
-    • Methods:
-    • __construct($name): A constructor method to initialize the library's name.
-    • addBook($book): Accepts a Book object and adds it to the library's collection of books.
-    • findAvailableBooks(): Returns an array of all available books in the library. 
-    • findBookByISBN($isbn): Takes an ISBN as an argument and returns the corresponding book object if it exists in the library, or null if not found.
-    • borrowBook($isbn): Accepts an ISBN, finds the book, and borrows it (set its availability to false).
-    • returnBook($isbn): Accepts an ISBN, finds the book, and returns it (set its availability to true). 
+- Attributes: 
+    - Name
+    - Books (an array to store Book objects)
+- Methods:
+  - __construct($name): A constructor method to initialize the library's name.
+  - addBook($book): Accepts a Book object and adds it to the library's collection of books.
+  - findAvailableBooks(): Returns an array of all available books in the library. 
+  - findBookByISBN($isbn): Takes an ISBN as an argument and returns the corresponding book object if it exists in the library, or null if not found.
+  - borrowBook($isbn): Accepts an ISBN, finds the book, and borrows it (set its availability to false).
+  - returnBook($isbn): Accepts an ISBN, finds the book, and returns it (set its availability to true). 
 
 Instructions for the Assessment:
-    • Create the Book class as described above.
-    • Create the Library class as described above.
-    • Write a sample script that demonstrates the functionality of your Library Book Management System. This script should: • Create instances of the Book class.
-    • Create an instance of the Library class.
-    • Add books to the library.
-    • Borrow and return books.
-    • Display available books in the library.
+- Create the Book class as described above.
+- Create the Library class as described above.
+- Write a sample script that demonstrates the functionality of your Library Book Management System. This script should: 
+    - Create instances of the Book class.
+    - Create an instance of the Library class.
+    - Add books to the library.
+    - Borrow and return books.
+    - Display available books in the library.
 
 Ensure that your code is well-documented, follows best practices for OOP in PHP, and handles potential errors gracefully.
 

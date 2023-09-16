@@ -2,3 +2,5 @@ vendor/
 tmp/
 logs/
 .idea/
+createTables.sql
+mysqldump.sql
