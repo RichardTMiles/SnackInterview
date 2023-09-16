@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cfad600d4ae5a352a0b69db8949e8e7",
+    "content-hash": "fc0dcec904c83a40991e5708a0c9d8f6",
     "packages": [
         {
             "name": "carbonorm/carbonphp",
-            "version": "17.1.2",
+            "version": "18.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonORM/CarbonPHP.git",
-                "reference": "088d5ceaa5fc0345c49af592580936e708493e5a"
+                "reference": "1606e9caec601de55d082a17b792060b319f9841"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonORM/CarbonPHP/zipball/088d5ceaa5fc0345c49af592580936e708493e5a",
-                "reference": "088d5ceaa5fc0345c49af592580936e708493e5a",
+                "url": "https://api.github.com/repos/CarbonORM/CarbonPHP/zipball/1606e9caec601de55d082a17b792060b319f9841",
+                "reference": "1606e9caec601de55d082a17b792060b319f9841",
                 "shasum": ""
             },
             "require": {
@@ -32,7 +32,7 @@
                 "ext-sockets": "*",
                 "ext-zip": "*",
                 "mustache/mustache": "^2.13.0",
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "psr/log": "1.1.4"
             },
             "require-dev": {
@@ -86,9 +86,9 @@
             ],
             "support": {
                 "issues": "https://github.com/CarbonORM/CarbonPHP/issues",
-                "source": "https://github.com/CarbonORM/CarbonPHP/tree/17.1.2"
+                "source": "https://github.com/CarbonORM/CarbonPHP/tree/18.0.1"
             },
-            "time": "2023-09-08T05:04:33+00:00"
+            "time": "2023-09-16T02:56:26+00:00"
         },
         {
             "name": "mustache/mustache",
@@ -197,7 +197,10 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=8.2",
+        "ext-readline": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }

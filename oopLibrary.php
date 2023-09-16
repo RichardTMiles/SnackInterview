@@ -3,6 +3,7 @@
 
 // Composer autoload
 use CarbonPHP\Abstracts\ColorCode;
+use CarbonPHP\Error\ThrowableHandler;
 use CarbonPHP\Interfaces\iColorCode;
 use SnackInterview\Book;
 use SnackInterview\Library;
@@ -14,6 +15,8 @@ if (false === ($loader = include $autoloadFile = 'vendor' . DIRECTORY_SEPARATOR 
     die(1);
 
 }
+
+ThrowableHandler::start();
 
 $captureValidInput = static function (string $prompt): string {
 
@@ -110,10 +113,11 @@ do {
 
         case 'exit':
 
-            ColorCode::colorCode('Have a great day!', iColorCode::GREEN);
+            ColorCode::colorCode('Have a great day!', iColorCode::MAGENTA);
 
             break;
 
     }
 
 } while ($userInput !== 'exit');
+

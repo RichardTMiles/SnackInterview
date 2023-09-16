@@ -115,8 +115,8 @@ class SnackCrate extends Application implements iConfig
                 CarbonPHP::DB_HOST => '127.0.0.1',
                 CarbonPHP::DB_PORT => '3306',
                 CarbonPHP::DB_NAME => 'SnackInterview',                       // Schema
-                CarbonPHP::DB_USER => 'root',                            // User
-                CarbonPHP::DB_PASS => 'password',                          // Password
+                CarbonPHP::DB_USER => 'root',
+                CarbonPHP::DB_PASS => 'password',
                 CarbonPHP::REBUILD => false
             ],
             CarbonPHP::SITE => [

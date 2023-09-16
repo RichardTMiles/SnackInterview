@@ -1,7 +1,15 @@
 **Task 1: Basic Syntax and Understanding**
 ### 1.1. Write a PHP script to display the current date and time in the following format: "Day-Month-Year Hours:Minutes:Seconds".
 
-    <?=date('d-M-Y H:i:s') ?>
+```PHP
+<?=date('d-M-Y H:i:s') ?>
+```
+
+Or you can execute using your shell:
+
+```BASH
+php -r "print date('d-M-Y H:i:s');"
+```
 
 ### 1.2. Explain the differences between "echo" and "print" in PHP.
 
@@ -21,12 +29,14 @@ $isPalindrome = static function($str) {
     
 }
 ```
+https://www.php.net/manual/en/function.strrev.php
 
 ### 2.2. Write a PHP script that removes duplicate elements from an array.
 
 ```PHP
 $removeArrayDuplicates = static fn($array) => array_unique($array);
 ```
+https://www.php.net/manual/en/function.array-unique.php
 
 **Task 3: File Handling and Exceptions**
 ### 3.1. Write a PHP script to read a file, count the number of lines in it, and display the count.
@@ -37,12 +47,13 @@ The following php command can be used to count the number of lines in a file (RE
 
 Cat will print a full file to stdout which is then piped to wc -l. 
 This ensures wc will not print the filename in the corresponding output. 
-This is just php running a [shell_exec](https://www.php.net/manual/en/function.shell-exec.php).
-PHP is not the best language for this task, but a pure PHP example can be done.
+This is just php running a [shell_exec](https://www.php.net/manual/en/function.shell-exec.php) using the [Execution Operator](https://www.php.net/manual/en/language.operators.execution.php).
+PHP is not the best language for this task which is the shell `wc` is used, but a pure PHP example can be done.
 For sufficiently large files, php can not load the full file into memory.
-This only leaves us with the option of reading the file line by line using a pointer.
+This only leaves us with the option of reading the file line by line using a file pointer.
 ```PHP
 <?php
+
 // Specify the file path
 $filePath = $argv[1] ?? "README.md"; 
 
@@ -57,7 +68,9 @@ if (file_exists($filePath)) {
         
         // Loop through the file line by line
         while (($line = fgets($file)) !== false) {
+            
             $lineCount++;
+            
         }
         
         // Close the file
@@ -69,10 +82,13 @@ if (file_exists($filePath)) {
     } else {
     
         echo "Failed to open the file.";
+    
     }
    
 } else {
+    
     echo "The file does not exist.";
+
 }
 
 ```
@@ -95,8 +111,13 @@ chmod +x ./downlaodComposer.sh
 
 Update the configurations database username and password. The default is `root` and `password`.
 This is located ./snackinterview/SnackCrate.php.
-You can use this command ` cat ./snackinterview/SnackCrate.php | grep -n CarbonPHP::DB_USER` to find the line number.
+You can use this command ` cat ./snackinterview/SnackCrate.php | grep -n CarbonPHP::DB_USER` to find the line number or optionally use the following sed command to update the file.
+You'll still need to modify the user and password (SnackUser & SnackPass) from the command below.
 
+```BASH 
+sed -i '' -E "s|CarbonPHP::DB_USER => '(.*)',|CarbonPHP::DB_USER => 'SnackUser',|g" ./snackinterview/SnackCrate.php
+sed -i '' -E "s|CarbonPHP::DB_PASS => '(.*)',|CarbonPHP::DB_PASS => 'SnackPass',|g" ./snackinterview/SnackCrate.php
+```
 
 Once you have composer installed you can use it to install the dependencies and set up our [PSR-4 namespacing](https://www.php-fig.org/psr/psr-4/) for this project.
 ```BASH
@@ -139,7 +160,17 @@ My project [CarbonPHP](https://github.com/CarbonORM/CarbonPHP) uses PDO and prep
 Create a simple Library Book Management System in PHP using object-oriented programming principles. Your system should consist of a Book class and a Library class.
 
 ##### Book Class:
-Create a Book class with the following attributes and methods:
+
+##### Usage:
+
+Following [best practices](https://www.php-fig.org/psr/) we will use [composer](https://getcomposer.org/) to load our namespaces dynamically. 
+Please ensure that `composer.phar install` has been run in this directory.
+
+```BASH
+php oopLibrary.php
+```
+
+##### Create a Book class with the following attributes and methods:
 - Attributes: 
     - Title
     - Author

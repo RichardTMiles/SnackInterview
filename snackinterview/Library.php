@@ -10,6 +10,8 @@ class Library
     public static string $name;
 
     /**
+     * Using PHPDOC to define the type of the array
+     * This helps your editor know what type of data is in the array
      * @var Book[]
      */
     public static array $books = [];
